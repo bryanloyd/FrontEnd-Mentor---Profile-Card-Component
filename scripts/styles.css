@@ -13,11 +13,15 @@ body {
   font-size: 1.8rem;
   font-weight: 400;
   background-color: #19a1ae;
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/images/bg-pattern-top.svg),
+    url(/images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: right 36vw bottom 48vh, left 37vw top 47vh;
 }
 
 .card {
@@ -26,6 +30,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
   background-color: #fff;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
 }
 
 .top {
@@ -42,13 +47,14 @@ body {
 
 .middle img {
   border-radius: 100%;
-  border: 4px solid #fff;
+  border: 6px solid #fff;
   height: 96px;
   width: 96px;
   position: relative;
   top: -40px;
-  left: 115px;
+  left: 35%;
 }
+
 .name {
   font-weight: 700;
   margin-right: 10px;
@@ -61,10 +67,12 @@ body {
 }
 
 .location {
+  width: 100%;
   font-weight: 400;
   color: #6a6f81;
   text-align: center;
   font-size: 1.4rem;
+  display: inline-block;
 }
 
 .bottom {
@@ -88,6 +96,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   margin: 0;
+  letter-spacing: 1px;
 }
 
 .followers {
@@ -105,4 +114,10 @@ body {
 .likes {
   width: 34%;
   margin: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .card {
+    width: 350px;
+  }
 }
